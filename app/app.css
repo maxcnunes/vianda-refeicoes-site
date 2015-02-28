@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  background: url(images/bg.jpg) repeat-x top;
+  font-family: 'Droid Sans', sans-serif;
+  color: #505153;
+}
+
+body>header{
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+#logo {
+}
+
+#banner {
+}
+
+.dark-box {
+  color: #fff;
+  background: #505050;
+}
+
+.red-box {
+  color: #fff;
+  background: #dc4f45;
+}
+
+.color-box {
+  min-height: 11em;
+  text-align: center;
+}
+
+#telefone, #moto {
+  padding: 2.5em 0;
+}
+
+#telefone img, #telefone>div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#telefone>div {
+  text-align: left; 
+  margin-left: 1em;
+}
+
+#telefone h1 {
+  margin: 0;
+}
+
+.descricao {
+  padding: 1em 0;
+}
+
+.descricao ul {
+  margin: 0 auto;
+  padding: 1.5em 0 0 0;
+  width: 6em;
+  text-align: left;
+}
+
+#endereco ul {
+  padding-top: 2em;
+  text-align: left;
+}
+
+#mapa {
+  padding: 0;
+}
+
+#mapa iframe {
+  width: 100%;
+}
+
+#tabelas {
+  margin: 2em 0;
+}
+#tabelas header {
+  text-align: center;
+}
+
+table th, table td {
+  text-align: center;
+  border: 1px solid #808285;
+}

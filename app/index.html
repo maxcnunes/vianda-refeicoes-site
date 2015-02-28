@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+
+    <title>Vianda Refeições</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="app.css" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60196289-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo">
+        <img src="images/logo.png" alt="Vianda Refeicoes - Logo">
+      </div>
+      <p>O sabor na medida certa!</p>
+      <div id="banner">
+        <img src="images/banner.png" alt="Vianda Refeicoes - Banner">
+      </div>
+      <p>AQUI VOCÊ ENCONTRA A HORA MAIS GOSTOSA DO DIA!</p>
+      <p>UM ESPAÇO AGRADÁVEL E UM CARDÁPIO SABOROSO, SEM PERDER DE VISTA O CLIMA HOSPITALEIRO E ACONCHEGANTE DO GRUPO.</p>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="descricao color-box dark-box col-md-2">
+          <ul>
+            <li>NOSSA</li>
+            <li>COMIDA</li>
+            <li>DELICIOSA</li>
+            <li>NA SUA</li>
+            <li>PORTA</li>
+          </ul>
+        </div>
+        <div id="telefone" class="color-box red-box col-md-8">
+          <img src="images/telefone.png">
+          <div>
+            <span>Disk entrega</span>
+            <h1>3348-0628</h1>
+          </div>
+        </div>
+        <div id="moto" class="color-box dark-box col-md-2">
+          <img src="images/moto.png">
+        </div>
+      </div>
+
+      <div id="tabelas" class="row">
+        <div class="col-md-8">
+          <header>
+            <img src="images/talheres.png">
+            <h2>OPÇÕES DE CARDÁPIO DO DIA</h2>
+          </header>
+          <table id="cardapio" class="table table-striped">
+            <thead>
+              <tr>
+                <th class="dark-box">PRATO DO DIA</th>
+                <th class="red-box">CHURRASCO</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <header>
+            <img src="images/RS.png">
+            <h2>VALORES</h2>
+          </header>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="dark-box">MARMITA</th>
+                <th class="red-box">R$</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MINI</td>
+                <td>9,00</td>
+              </tr>
+              <tr>
+                <td>MÉDIA</td>
+                <td>10,00</td>
+              </tr>
+              <tr>
+                <td>GRANDE</td>
+                <td>15,00</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="dark-box">SELF SERVICE</th>
+                <th class="red-box">R$</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A VONTADE</td>
+                <td>15,00</td>
+              </tr>
+              <tr>
+                <td>PRATO FEITO</td>
+                <td>12,00</td>
+              </tr>
+              <tr>
+                <td>POR KILO</td>
+                <td>25,90</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="descricao color-box dark-box col-md-2">
+          <ul>
+            <li>VENHA</li>
+            <li>NOS VISITAR,</li>
+            <li>ESTAMOS</li>
+            <li>ESPERANDO</li>
+            <li>POR VOCÊ!</li>
+          </ul>
+        </div>
+        <div id="endereco" class="color-box red-box col-md-4">
+          <ul>
+            <li>Rua Serra do Mirador, 549</li>
+            <li>Jd. Bandeirantes</li>
+            <li>Londrina - PR</li>
+            <li>Horário de atendimento</li>
+            <li>11:00 às 14:00 hrs</li>
+          </ul>
+        </div>
+        <div id="mapa" class="color-box col-md-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7328.771455276796!2d-51.2015513!3d-23.301759699999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb5b1566dd902b%3A0x82377db8654dbb86!2sRua+Serra+do+Mirador%2C+549+-+Bandeirantes!5e0!3m2!1sen!2s!4v1403274244910"  frameborder="0" style="border:0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    $.getJSON('/api/menu-meals', function( data ) {
+        var items = [];
+
+        $.each( data, function( key, cells ) {
+          if (parseInt(key) === 1) return; // ignores header
+
+          items.push([
+            '<tr>',
+            '  <td>' + (cells['1'] || '') + '</td>',
+            '  <td>' + (cells['2'] || '') + '</td>',
+            '</tr>'
+          ].join(''));
+        });
+
+        $('#cardapio tbody').html(items.join(''));
+      });
+    </script>
+  </body>
+</html>
