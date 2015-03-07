@@ -117,3 +117,8 @@ table th, table td {
 header h2, thead {
   text-transform: uppercase;
 }
+
+h3 {
+  font-size: 1em;
+  margin: 0 auto;
+}
