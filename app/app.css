@@ -14,9 +14,13 @@ ul {
 }
 
 #logo {
+  background: url(images/logo.png) no-repeat center;
+  height: 260px;
 }
 
 #banner {
+  background: url(images/banner.png) no-repeat center;
+  height: 371px;
 }
 
 .dark-box {
@@ -35,20 +39,27 @@ ul {
 }
 
 #telefone, #moto {
-  padding: 2.5em 0;
+  padding: 3.3em 0;
 }
 
-#telefone img, #telefone>div {
-  display: inline-block;
-  vertical-align: middle;
-}
 #telefone>div {
-  text-align: left; 
+  text-align: left;
   margin-left: 1em;
+  background: url(images/telefone.png) no-repeat left;
+  width: 250px;
+  margin: 0 auto;
+  padding-left: 70px;
 }
 
 #telefone h1 {
   margin: 0;
+}
+
+#moto>div {
+  background: url(images/moto.png) no-repeat left;
+  width: 85px;
+  height: 54px;
+  margin: auto;
 }
 
 .descricao {
@@ -85,4 +96,14 @@ ul {
 table th, table td {
   text-align: center;
   border: 1px solid #808285;
+}
+
+#cardapio header {
+  background: url(images/talheres.png) no-repeat center top;
+  padding-top: 60px;
+}
+
+#valores header {
+  background: url(images/RS.png) no-repeat center top;
+  padding-top: 60px;
 }
