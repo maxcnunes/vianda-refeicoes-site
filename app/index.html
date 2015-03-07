@@ -72,6 +72,11 @@
               </tr>
             </thead>
             <tbody></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2"><em>Cardápio atualizado em: <span id="updatedat">...</span></em></td>
+              </tr>
+            </tfoot>
           </table>
         </div>
         <div id="valores" class="col-md-4">
@@ -155,7 +160,7 @@
     $.getJSON('/api/menu-meals', function( data ) {
         var items = [];
 
-        $.each( data, function( key, cells ) {
+        $.each( data.items, function( key, cells ) {
           if (parseInt(key) === 1) return; // ignores header
 
           items.push([
@@ -167,6 +172,7 @@
         });
 
         $('#cardapio tbody').html(items.join(''));
+        $('#updatedat').html(data.updatedAt);
       });
     </script>
   </body>

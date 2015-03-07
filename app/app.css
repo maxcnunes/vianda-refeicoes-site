@@ -103,7 +103,15 @@ table th, table td {
   padding-top: 60px;
 }
 
+#cardapio tfoot {
+  font-size: 0.8em;
+}
+
 #valores header {
   background: url(images/RS.png) no-repeat center top;
   padding-top: 60px;
+}
+
+header h2, thead {
+  text-transform: uppercase;
 }
