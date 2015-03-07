@@ -1,4 +1,5 @@
 certs
 move
 node_modules
-app/images/.DS_Store
+.DS_Store
+npm-debug.log
