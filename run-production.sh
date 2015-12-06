@@ -31,10 +31,10 @@ docker run \
     --name $APP \
     -v $(pwd):/src  \
     -v /data/$APP/certs:/src/certs  \
-    -e SPREADSHEET_ID="xxxxx" \
-    -e WORKSHEET_ID="xxxxx" \
-    -e OAUTH_EMAIL="xxxxx" \
-    -e OAUTH_KEYFILE="xxxxx" \
+    -e SPREADSHEET_ID \
+    -e WORKSHEET_ID \
+    -e OAUTH_EMAIL \
+    -e OAUTH_KEYFILE \
     -e VIRTUAL_HOST="viandarefeicoes.com.br,www.viandarefeicoes.com.br" \
     -e VIRTUAL_PORT="3000"  \
     -p 3000  \
