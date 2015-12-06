@@ -31,6 +31,7 @@ docker run \
     -e OAUTH_EMAIL \
     -e OAUTH_KEYFILE \
     -e VIRTUAL_HOST="viandarefeicoes.com.br,www.viandarefeicoes.com.br" \
+    -e HTTP_IP="0.0.0.0"  \
     -e VIRTUAL_PORT="3000"  \
     -p 3000  \
     $APP:latest
