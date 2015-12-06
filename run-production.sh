@@ -29,7 +29,7 @@ docker run \
     --restart=always \
     -d \
     --name $APP \
-    -v .:/src  \
+    -v $(pwd):/src  \
     -v /data/$APP/certs:/src/certs  \
     -e SPREADSHEET_ID="xxxxx" \
     -e WORKSHEET_ID="xxxxx" \
