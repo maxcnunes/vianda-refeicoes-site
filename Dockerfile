@@ -1,4 +1,4 @@
-FROM node:0.12.0
+FROM mhart/alpine-node:0.12
 
 WORKDIR /src
 ADD . /src
