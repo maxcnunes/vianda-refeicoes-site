@@ -16,7 +16,7 @@ echo "==> building docker image"
 docker build -t $APP:latest .
 
 echo "==> installing node dependencies"
-docker run --rm $APP:latest npm install
+docker run --rm -v $(pwd):/src $APP:latest npm install
 
 
 echo "==> removing previous running container"
