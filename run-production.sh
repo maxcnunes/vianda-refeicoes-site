@@ -2,15 +2,10 @@
 
 cd
 APP="vianda-refeicoes-site"
-if [[ -d "$APP" ]]; then
-  echo "==> pulling project"
-  cd $APP
-  git pull -r
-else
-  echo "==> cloning project"
-  git clone https://github.com/maxcnunes/$APP.git
-  cd $APP
-fi
+
+echo "==> pulling project"
+cd $APP
+git pull -r
 
 echo "==> building docker image"
 docker build -t $APP:latest .
@@ -20,8 +15,8 @@ docker run --rm -v $(pwd):/src $APP:latest npm install
 
 
 echo "==> removing previous running container"
-if /usr/bin/docker ps -a | grep --quiet "vianda-refeicoes-site" ; then
-  /usr/bin/docker rm -f $APP
+if docker ps -a | grep --quiet "vianda-refeicoes-site" ; then
+  docker rm -f $APP
 fi
 
 echo "==> starting container"
@@ -41,4 +36,3 @@ docker run \
     $APP:latest
 
 echo "==> finished"
-cd -
