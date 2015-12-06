@@ -69,13 +69,14 @@
             <thead>
               <tr>
                 <th class="dark-box"><h3>Prato do dia</h3></th>
-                <th class="red-box"><h3>Churrasco</h3></th>
+                <th class="red-box"><h3>1ª Opçāo</h3></th>
+                <th class="red-box"><h3>2ª Opçāo</h3></th>
               </tr>
             </thead>
             <tbody></tbody>
             <tfoot>
               <tr>
-                <td colspan="2"><em>Cardápio atualizado em: <span id="updatedat">...</span></em></td>
+                <td colspan="3"><em>Cardápio atualizado em: <span id="updatedat">...</span></em></td>
               </tr>
             </tfoot>
           </table>
@@ -121,7 +122,7 @@
               </tr>
               <tr>
                 <td>Prato feito</td>
-                <td>12,00</td>
+                <td>11,90</td>
               </tr>
               <tr>
                 <td>Por kilo</td>
@@ -160,14 +161,22 @@
     <script type="text/javascript">
     $.getJSON('/api/menu-meals', function( data ) {
         var items = [];
+        var columnName = {
+          'Prato do dia': '1',
+          '1ª Opçāo': '2',
+          '2ª Opçāo': '3'
+        };
 
         $.each( data.items, function( key, cells ) {
-          if (parseInt(key) === 1) return; // ignores header
+          var index = parseInt(key, 10);
+          console.log('index', index, cells);
+          if (index === 1) return; // ignores header
 
           items.push([
             '<tr>',
-            '  <td>' + (cells['1'] || '') + '</td>',
-            '  <td>' + (cells['2'] || '') + '</td>',
+            '  <td>' + (cells[columnName['Prato do dia']] || '') + '</td>',
+            '  <td>' + (cells[columnName['1ª Opçāo']] || '') + '</td>',
+            '  <td>' + (cells[columnName['2ª Opçāo']] || '') + '</td>',
             '</tr>'
           ].join(''));
         });
