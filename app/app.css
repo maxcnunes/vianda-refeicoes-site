@@ -138,4 +138,5 @@ header {
 @media only screen and (max-width: 650px)
 {
 	#Text1 {width: 15em!important; text-align: center!important; font-size: 1.5em;}
+  #endereco ul {text-align: center;}
 }
