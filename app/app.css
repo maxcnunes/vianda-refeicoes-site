@@ -68,7 +68,7 @@ ul {
   text-transform: uppercase;
 }
 
-.descricao ul {
+#Text1 {
   margin: 0 auto;
   padding: 1.5em 0 0 0;
   width: 6em;
@@ -121,4 +121,21 @@ header h2, thead {
 h3 {
   font-size: 1em;
   margin: 0 auto;
+}
+
+header {
+	margin-bottom: 50px;
+}
+
+
+/*TABLET*/
+@media only screen and (max-width: 950px)
+{
+	#Text1 {width: 30em!important; text-align: center!important; font-size: 1.5em;}
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 650px)
+{
+	#Text1 {width: 15em!important; text-align: center!important; font-size: 1.5em;}
 }
